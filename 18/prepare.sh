@@ -46,7 +46,7 @@ apt-get  --assume-yes  autoremove
 ##apt-get  --assume-yes  install grub-pc=2.02~beta2-9 grub2-common=2.02~beta2-9 grub-pc-bin=2.02~beta2-9 grub-common=2.02~beta2-9 grub2
 
 
-# spanish language
+# Spanish language
 
 locale-gen es_ES.utf8
 update-locale
@@ -64,6 +64,11 @@ PKGS="$PKGS nano git sshfs unionfs-fuse rsync"
 
 wget -c https://raw.githubusercontent.com/jesuslalvaro/uies/master/bin/wrun.sh -O /usr/bin/wrun
 chmod +x /usr/bin/wrun
+
+## pcloud
+wget -c https://p-ams1.pcloud.com/D4Z6yURLJZAxYUbJZZZqBxRU7Z2ZZqK0ZkZOpNXZN7ZCXZrkZv1aQ7ZaOjeuujH9ljYk1d3Wiw3XHuQGdtk/pcloudcc_2.0.1-1_amd64.debian.8.10.deb -O /tmp/pcloudcc.deb
+dpkg -i /tmp/pclou*
+
 
 PKGS="$PKGS language-pack-es language-pack-gnome-es myspell-es aspell-es firefox-locale-es " 
 # PKGS="$PKGS grub2"
