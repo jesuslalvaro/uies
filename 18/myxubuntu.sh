@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+### debemos llamar este script con sudo !!
+
 ##############
 MYDIR=`pwd`
 cd `dirname "$0"`
@@ -10,4 +13,4 @@ cd $MYDIR
 ISOOUT=/media/ubuntu-studio/Acer/tmp/isos
 ISO=/isodevice/bionic.hd/bionic-desktop-amd64.iso
 
-remasteriso.sh $ISO $ISOOUT $THISSCRIPTPATH/myxubuntu.conf
+$THISSCRIPTPATH/../bin/remasteriso.sh $ISO $ISOOUT $THISSCRIPTPATH/myxubuntu.conf

@@ -88,12 +88,12 @@ limpiachroot() {
         cat > $scrpt << EOF
 #! /bin/sh
 #if [ -f "/etc/resolv.conf" ] ; then
-        #~ apt-get --assume-yes --force-yes update
-        apt-get --assume-yes --force-yes install -f
+        #~ apt-get --assume-yes  update
+        apt-get --assume-yes  install -f
 #        update-python-modules -f
         dpkg --configure -a
-        apt-get --assume-yes --force-yes clean
-        apt-get --assume-yes --force-yes autoremove
+        apt-get --assume-yes  clean
+        apt-get --assume-yes  autoremove
 #        rm /etc/resolv.conf
 #fi
 
@@ -106,7 +106,8 @@ rm -rf /root/.bash_history
 
 umount /proc
 umount /sys
-if $(grep volatile /etc/mtab) ; then
+if grep --quiet  volatile /etc/mtab; then
+##if $(grep volatile /etc/mtab) ; then
     umount /lib/modules/*/volatile
 fi
 
@@ -252,6 +253,9 @@ cat $UN/filesystem.size
 echo "...."
 
 # copiar initrd (y kernel y filesystem.* )
+### TODO las nuevas isos live no llevan initrd ni kernel dentro, sino en casper....
+
+
 
 echo " Instalando  KERNEL........ "
 ###OJO solo debe borrar y copiar un nuevo kernel si hay uno nuevo listo
