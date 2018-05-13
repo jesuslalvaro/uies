@@ -81,10 +81,10 @@ set timeout=15
 
 ### intentando menus automaticos:
 for menufile in /*/menu.cfg; do
-  ##  source "\$cfgfile"
-  menuentry "\${menufile}" {
-	configfile "\$menufile"
-	}
+    source "\$menufile"
+# menuentry "\${menufile}" {
+#	configfile "\$menufile"
+#	}
 done
 
 EOF
