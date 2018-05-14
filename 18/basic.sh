@@ -32,6 +32,9 @@ PKGS=""
 #basic
 PKGS="$PKGS nano git sshfs unionfs-fuse rsync"
 PKGS="$PKGS  gparted partimage "
+PKGS="$PKGS fuseiso squashfuse"
+
+
 #?
 ##PKGS="$PKGS uies-remaster uies-pendriveinstaller"
 ###TODO falta incluir el tema plymouth cuando este listo 
