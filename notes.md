@@ -1,6 +1,7 @@
 En este archivo escribire algunas notas
 
-Usando repositorio de github
+### 180514
+Se ha incluido archivo con ejemplos de instalacion masnula
 
 ### 180509
 
