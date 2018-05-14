@@ -14,6 +14,11 @@
 #DEVICE=/dev/sdd
 
 FOLDER=$1  
+
+### OJO pendrives con nombres con espacios fallan -> crear un alias en /tmp
+ln -s $FOLDER /tmp/fold
+FOLDER=/tmp/fold
+
 DEVICE=$2  
 
 apt-get install grub-efi-amd64
