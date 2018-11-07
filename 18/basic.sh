@@ -1,8 +1,8 @@
 #!/bin/bash
 
-## disponible en https://raw.githubusercontent.com/jesuslalvaro/uies/master/18/prepare.sh
-## iso de partida UBUNTU TRUSTY OFICIAL
-# wget -c http://cdimage.ubuntu.com/daily-live/current/trusty-desktop-i386.iso
+## disponible en https://raw.githubusercontent.com/jesuslalvaro/uies/master/18/
+## iso de partida UBUNTU  OFICIAL
+# wget -c http://cdimage.ubuntu.com/daily-live/current/
 # KEY="20130331scriptvalido"
 
 
@@ -44,9 +44,6 @@ PKGS="$PKGS fuseiso squashfuse"
 wget -c https://raw.githubusercontent.com/jesuslalvaro/uies/master/bin/wrun.sh -O /usr/bin/wrun
 chmod +x /usr/bin/wrun
 
-## pcloud
-wget -c https://p-ams1.pcloud.com/D4Z6yURLJZAxYUbJZZZqBxRU7Z2ZZqK0ZkZOpNXZN7ZCXZrkZv1aQ7ZaOjeuujH9ljYk1d3Wiw3XHuQGdtk/pcloudcc_2.0.1-1_amd64.debian.8.10.deb -O /tmp/pcloudcc.deb
-dpkg -i /tmp/pclou*
 
 ## Spanish
 PKGS="$PKGS language-pack-es language-pack-gnome-es myspell-es aspell-es firefox-locale-es " 
